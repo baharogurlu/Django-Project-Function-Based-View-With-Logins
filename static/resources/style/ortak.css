@@ -1,0 +1,45 @@
+.strong{
+	
+	font-weight: bold;
+}
+
+.label-form{
+	
+	 text-align: center;
+	 font-weight:bold;
+	 background-color: #DCDCDC;
+}
+
+.modal-header > .baslik-green{
+	
+	background-color: 15ed38;
+}
+
+.modal-backdrop {
+    display:none !important;;
+}
+
+.modal-dialog.modal-notify .close {
+    opacity: 2;
+}
+.cursor-pointer{
+	cursor: pointer;
+}
+.modal-dialog.modal-notify.modal-info .badge, .modal-dialog.modal-notify.modal-info,
+ .modal-dialog.modal-notify.modal-info .modal-header {
+    background-color: #72c02c;
+}
+
+.white-text{
+color:#FFF  ;
+  opacity: .9 !important ;
+}
+.modal-dialog.modal-notify .heading{
+    margin: 0;
+    color: #fff;
+}
+
+.class-hidden{
+	display:none;
+}
+

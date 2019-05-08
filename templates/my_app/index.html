@@ -1,0 +1,50 @@
+{% extends 'my_app/base.html' %}
+
+{% block main_content %}
+
+
+{% if topic_list %}
+	<div class="panel panel-sea col-md-4">
+								<table class="table table-striped">
+									<thead>
+										<tr>
+											<th>Topic Name</th>
+										</tr>
+									</thead>
+									<tbody>
+										{% for top in topic_list %}
+										<tr>
+											<td>{{top.topic_name | upper}}</td>
+										</tr>
+										{% endfor %}
+
+									</tbody>
+								</table>
+							</div>
+{% endif %}
+
+{% if webpage_list %}
+	<div class="panel panel-sea col-md-4">
+								<table class="table table-striped">
+									<thead>
+										<tr>
+											<th>Name</th>
+											<th>Topic</th>
+											<th>URL</th>
+										</tr>
+									</thead>
+									<tbody>
+										{% for wb in webpage_list %}
+										<tr>
+											<td>{{wb.name}} </td>
+											<td>{{wb.topicId.topic_name}}</td>
+											<td>{{wb.url}}</td>
+										</tr>
+										{% endfor %}
+
+									</tbody>
+								</table>
+							</div>
+{% endif %}
+
+{% endblock %}

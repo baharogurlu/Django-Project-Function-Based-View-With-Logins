@@ -1,0 +1,67 @@
+/* Add here all your css styles (customizations) */
+/*solmenuye eklenen nestedLeftMenu bölümü için eklendi*/
+/* .sidebar-nav-v1 .nestedLeftMenu ul li a{ */
+/* 	color: #555 !important; */
+/* } */
+/* .sidebar-nav-v1 .nestedLeftMenu ul li.focus a, */
+/* .sidebar-nav-v1 .nestedLeftMenu ul li.hover a, */
+/* .sidebar-nav-v1 .nestedLeftMenu ul li.active a, */
+/* { */
+/* 	color: #72c02c !important; */
+/* } */
+
+/* .sidebar-nav-v1 .nestedLeftMenu ul li.active a{ */
+/* 	background-color: #555; */
+/* } */
+
+.color-1{
+	background:#1abc9c;
+	color: #fff;
+}
+
+.color-2{
+	background:#e74c3c;
+	color: #fff;
+}
+
+.color-3{
+	background:#9b6bcc;
+	color: #fff;
+}
+
+.color-4{
+	background:#f1c40f;
+	color: #fff;
+}
+
+.color-5{
+	background:#e67e22;
+	color: #fff;
+}
+
+.color-6{
+	background:#3498db;
+	color: #fff;
+}
+
+.color-7{
+	background:#e67e22;
+	color: #fff;
+}
+.color-8{
+	background:#95a5a6;
+	color: #fff;
+}
+
+.color-default{
+	background:#72c02c;
+	color: #fff;
+}
+.status-icon{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.content{
+	width:90% !important;
+}

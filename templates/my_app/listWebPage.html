@@ -1,0 +1,15 @@
+{% extends 'my_app/base.html' %}
+
+{% block main_content %}
+<div class="sky-form col-md-9">
+    <h1>Web Sayfası Ekle </h1>
+    <form method="POST">
+
+        {{ form.as_p }}
+        {% csrf_token %}
+
+        <input type="submit" class="btn btn-success" value="Kaydet">
+    </form>
+</div>
+
+{% endblock %}

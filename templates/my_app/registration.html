@@ -1,0 +1,19 @@
+{% extends 'my_app/base.html' %}
+
+{% block main_content %}
+
+<div class="row col col-6">
+    {% if registered %}
+        <h1> Thank You For Register </h1>
+    {% else %}
+        <h1>Register Here!</h1>
+        <h2>Fill Out The Form:</h2>
+        <form  enctype="multipart/form-data" method="post" >
+            {% csrf_token %}
+            {{ user_form.as_p }}
+            {{ profile_form.as_p }}
+            <input type="submit" value="Register!" name="">
+        </form>
+    {% endif %}
+</div>
+{% endblock %}

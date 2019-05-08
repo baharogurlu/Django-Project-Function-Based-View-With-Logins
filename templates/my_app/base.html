@@ -1,0 +1,135 @@
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatiple" content="IE-Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Django Project</title>
+
+
+    <link rel="stylesheet" href = "{% static 'resources/assets/plugins/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href = "{% static 'resources/assets/plugins/bootstrap/css/bootstrap-theme.min.css' %}">
+
+    <link rel="stylesheet" href = "{% static 'resources/assets/css/headers/header-default.css' %}">
+
+    <link rel="stylesheet" href = "{% static 'resources/assets/css/headers/header-default.css' %}">
+    <link rel="stylesheet" href = "{% static 'resources/assets/css/footers/footer-v1.css' %}">
+    <link rel="stylesheet" href = "{% static 'resources/assets/plugins/animate.css' %}">
+    <link rel="stylesheet" href = "{% static 'resources/assets/plugins/line-icons/line-icons.css' %}">
+
+
+    <link rel="stylesheet" href = "{% static 'resources/assets/plugins/font-awesome/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href = "{% static 'resources/assets/plugins/sky-forms-pro/skyforms/css/sky-forms.css' %}">
+    <link rel="stylesheet" href = "{% static 'resources/assets/plugins/sky-forms-pro/skyforms/custom/custom-sky-forms.css' %}">
+    <link rel="stylesheet" href = "{% static 'resources/select2/select2.min.css' %}">
+
+
+    <link rel="stylesheet" href = "{% static 'resources/assets/css/pages/page_log_reg_v1.css' %}">
+    <link rel="stylesheet" href = "{% static 'resources/assets/css/theme-colors/default.css' %}">
+    <link rel="stylesheet" href = "{% static 'resources/assets/css/theme-skins/dark.css' %}">
+    <link rel="stylesheet" href = "{% static 'resources/assets/css/custom.css' %}">
+
+    <link rel="stylesheet" href = "{% static 'resources/sweetalert/sweetalert2.min.css' %}">
+    <link rel="stylesheet" href = "{% static 'resources/datetimepicker/css/bootstrap-datetimepicker.css' %}">
+    <link rel="stylesheet" href = "{% static 'resources/sumo-edited/sumoselect.css' %}">
+
+
+    <link rel="stylesheet" href = "{% static 'resources/assets/css/pages/shortcode_timeline2.css' %}">
+    <link rel="stylesheet" href = "{% static 'resources/bootstrapDatepicker/css/bootstrap-datepicker.css' %}">
+    <link rel="stylesheet" href = "{% static 'resources/multistepform/assets/css/style.css' %}">
+    <link rel="stylesheet" href = "{% static 'resources/gentelella/custom.css' %}">
+    <link rel="stylesheet" href = "{% static 'resources/materialize/materialize.css' %}">
+    <link rel="stylesheet" href = "{% static 'resources/scripts/charts/highcharts.css' %}">
+
+
+
+
+
+
+
+    <script type="text/html" src="{% static 'resources/assets/plugins/jquery/jquery.min.js' %}"></script>
+
+    <script type="text/html" src="{% static 'resources/assets/plugins/bootstrap/js/bootstrap.min.js' %}"></script>
+    <script type="text/html" src="{% static 'resources/assets/plugins/back-to-top.js' %}"></script>
+
+
+    <script type="text/html" src="{% static 'resources/assets/plugins/smoothScroll.js' %}"></script>
+    <script type="text/html" src="{% static 'resources/assets/plugins/sky-forms-pro/skyforms/js/jquery.maskedinput.min.js' %}"></script>
+    <script type="text/html" src="{% static 'resources/assets/plugins/sky-forms-pro/skyforms/js/jquery-ui.min.js' %}"></script>
+    <script type="text/html" src="{% static 'resources/assets/plugins/sky-forms-pro/skyforms/js/jquery.validate.min.js' %}"></script>
+
+    <script type="text/html" src="{% static 'resources/assets/js/custom.js' %}"></script>
+    <script type="text/html" src="{% static 'resources/assets/js/app.js' %}"></script>
+    <script type="text/html" src="{% static 'resources/assets/js/plugins/style-switcher.js' %}"></script>
+    <script type="text/html" src="{% static 'resources/assets/js/plugins/masking.js' %}"></script>
+
+    <script type="text/html" src="{% static 'resources/assets/js/plugins/validation.js' %}"></script>
+    <script type="text/html" src="{% static 'resources/select2/select2.min.js' %}"></script>
+    <script type="text/html" src="{% static 'resources/scripts/jquery-validation-1.15.0/dist/localization/messages_${pageContext.response.locale}.js' %}"></script>
+    <script type="text/html" src="{% static 'resources/scripts/extra_validation.js' %}"></script>
+
+
+    <script type="text/html" src="{% static 'resources/sweetalert/sweetalert2.min.js' %}"></script>
+    <script type="text/html" src="{% static 'resources/scripts/jquery.form.min.js' %}"></script>
+    <script type="text/html" src="{% static 'resources/datetimepicker/js/bootstrap-datetimepicker.js' %}"></script>
+    <script type="text/html" src="{% static 'resources/jquery.sumoselect.js' %}"></script>
+    <script type="text/html" src="{% static 'resources/scripts/charts/js/highcharts.js' %}"></script>
+    <script type="text/html" src="{% static 'resources/scripts/charts/js/modules/exporting.js' %}"></script>
+
+
+
+
+
+</head>
+{% include 'my_app/header.html' %}
+
+<div class="container content">
+    <div class="row">
+        <div class="col-md-3">
+            <ul class="list-group sidebar-nav-v1" id="sidebar-nav">
+
+                        <li>
+							<a href="{% url 'my_app:index' %}">Base Page</a>
+						</li>
+                        <li>
+							<a href="{% url 'admin:index' %}">Admin Base Page</a>
+						</li>
+
+                        <li>
+							<a href="{% url 'my_app:register' %}">Register</a>
+						</li>
+
+
+                        {% if user.is_authenticated %}
+                            <li>
+							    <a href="{% url 'logout' %}">Logout</a>
+						    </li>
+                            <li>
+							    <a href="{% url 'my_app:listWebPage' %}">Add Web Page</a>
+						    </li>
+                	        <li>
+							    <a href="{% url 'my_app:listTopic' %}">Add Topic</a>
+						    </li>
+                            <li>
+							    <a href="{% url 'my_app:listFilter' %}">Filter Examples</a>
+						    </li>
+                        {% else %}
+                            <li>
+							    <a href="{% url 'my_app:user_login' %}">Login</a>
+						    </li>
+                        {% endif %}
+
+
+            </ul>
+						<!-- End Typography -->
+        </div>
+        <div class="col-md-9">
+            {% block main_content %}
+            {% endblock %}
+        </div>
+    </div>
+</div>
+{% include 'my_app/footer.html' %}
+</body>
+</html>

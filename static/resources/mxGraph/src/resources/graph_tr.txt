@@ -1,0 +1,11 @@
+alreadyConnected=türkçe
+containsValidationErrors=türkçe
+updatingDocument=türkçe
+updatingSelection=türkçe
+collapse-expand=türkçe
+doubleClickOrientation=türkçe
+close=türkçe
+error=türkçe
+done=türkçe
+cancel=türkçe
+ok=türkçe

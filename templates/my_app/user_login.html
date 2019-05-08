@@ -1,0 +1,17 @@
+{% extends 'my_app/base.html' %}
+
+{% block main_content %}
+
+<div class="row">
+    <h1>Plase Login</h1>
+    <form class="" action="{% url 'my_app/user_login' %}">
+
+        {% csrf_token %}
+        <label for="username">UserName:</label>
+        <input name="username" type="text" placeholder="Enter Username Plase">
+
+        <label for="password">UserName:</label>
+        <input name="password" type="password" placeholder="Enter Password Plase">
+    </form>
+</div>
+{% endblock %}

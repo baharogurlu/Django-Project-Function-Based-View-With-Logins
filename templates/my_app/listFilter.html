@@ -1,0 +1,28 @@
+{% extends 'my_app/base.html' %}
+
+{% block main_content %}
+
+<div class="panel panel-sea col-md-4">
+								<table class="table table-striped">
+									<thead>
+										<tr>
+											<th>upper</th>
+											<th>add -123</th>
+											<th>cut 'H'</th>
+										</tr>
+									</thead>
+									<tbody>
+										{% for webpage in webpage_list %}
+										<tr>
+											<td>{{webpage.name | upper}}</td>
+											<td>{{webpage.name | add:"-123"}}</td>
+											<td>{{webpage.name | cut:'H'}}</td>
+										</tr>
+										{% endfor %}
+
+									</tbody>
+								</table>
+							</div>
+
+
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends 'my_app/base.html' %}
+
+{% block main_content %}
+            <form id="sky-form4" class="sky-form" novalidate="novalidate" method="post">
+                {{form.as_p}}
+                {% csrf_token %}
+                <input type="submit" class="btn btn-success btn-xs rounded pull-right" value="Kaydet">
+            </form>
+{% endblock %}
